@@ -40,14 +40,14 @@ h3 {
 }
 
 /* navbar styles */
-.navbar {
+.navbar-css {
   @apply bg-white 
     z-20 
     border-b border-gray-300;
 }
 
 .navbar-container {
-  @apply flex justify-between items-center
+  @apply hidden lg:flex justify-between items-center
     max-w-6xl mx-auto px-5 mb-1;
 }
 
