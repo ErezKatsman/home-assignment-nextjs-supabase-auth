@@ -17,12 +17,12 @@ const content = {
   },
 };
 
-const FormCard = ({ method }) => {
+const FormCard = ({ method, action }) => {
   return (
     <>
       <div className="card bg-base-100 w-96 shadow-xl">
         <h1>{content[method].title}</h1>
-        <form className="py-6 space-y-4 md:space-y-6" action="#">
+        <form className="py-6 space-y-4 md:space-y-6">
           <div className="text-left">
             <label
               htmlFor="email"
@@ -58,6 +58,7 @@ const FormCard = ({ method }) => {
           <button
             type="submit"
             className="w-full text-white bg-purple-700 hover:bg-primary-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            formAction={action}
           >
             {content[method].btn}
           </button>
