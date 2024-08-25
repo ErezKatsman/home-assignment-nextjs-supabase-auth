@@ -1,5 +1,9 @@
-import React from 'react';
+import FormCard from "@/app/components/FormCard";
 
 export default function Login() {
-  return <div>Login</div>;
+  return (
+    <main>
+      <FormCard method={"logIn"} />
+    </main>
+  );
 }
