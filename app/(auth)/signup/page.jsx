@@ -1,6 +1,6 @@
 import FormCard from "../../components/FormCard";
 import React from "react";
-import { signup } from "./actions";
+import { signup } from "../auth-actions";
 
 export default function Signup() {
   return (

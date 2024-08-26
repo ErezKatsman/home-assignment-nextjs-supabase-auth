@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createClient } from "../../utils/supabse/client";
-import { signout } from "../(auth)/signup/actions";
+import { signout } from "../(auth)/auth-actions";
 
 const LoginoutBtn = () => {
   const [user, setUser] = useState(null);

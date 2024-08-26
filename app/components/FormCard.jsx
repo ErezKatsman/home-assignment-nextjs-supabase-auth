@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { signInWithGoogle } from "../(auth)/signup/actions";
+import { signInWithGoogle } from "../(auth)/auth-actions";
 import Logo from "./logo.svg";
 
 const content = {
