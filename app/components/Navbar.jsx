@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "./logo.svg";
+import LoginoutBtn from "./LoginoutBtn";
 
 // components
 // Uncomment when supabase auth ready
@@ -64,9 +65,7 @@ export default function Navbar() {
             <Link href="/guide">Guide</Link>
           </li>
           <li>
-            <Link href="/login">
-              <button className="btn-outline primary w-20">Login</button>
-            </Link>
+            <LoginoutBtn />
           </li>
         </ul>
       </div>
@@ -100,9 +99,7 @@ export default function Navbar() {
         {/* Profile/Account Section */}
         <div className="navbar-account">
           {/* Comment when supabase auth ready */}
-          <Link href="/login">
-            <button className="btn-outline primary w-20">Login</button>
-          </Link>
+          <LoginoutBtn />
           {/* Uncomment when supabase auth ready */}
           {/* <Profile /> */}
         </div>
