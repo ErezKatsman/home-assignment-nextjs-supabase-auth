@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { signInWithGoogle } from "../(auth)/signup/actions";
+import Logo from "./logo.svg";
 
 const content = {
   logIn: {
@@ -23,6 +24,13 @@ const FormCard = ({ method, action }) => {
   return (
     <>
       <div className="card bg-base-100 w-96 shadow-xl">
+        <Image
+          className="self-center"
+          src={Logo}
+          alt="Smart Storytime"
+          width={260}
+          quality={110}
+        />
         <h1>{content[method].title}</h1>
         <form className="py-6 space-y-4 md:space-y-6">
           <div className="text-left">
