@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { signInWithGoogle } from "../(auth)/signup/actions";
 
 const content = {
   logIn: {
@@ -57,7 +59,7 @@ const FormCard = ({ method, action }) => {
           </div>
           <button
             type="submit"
-            className="w-full text-white bg-purple-700 hover:bg-primary-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            className="w-full text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             formAction={action}
           >
             {content[method].btn}
@@ -79,6 +81,21 @@ const FormCard = ({ method, action }) => {
           </span>
           <div className="flex-grow border-t border-gray-400"></div>
         </div>
+        <form>
+          <button
+            type="submit"
+            formAction={signInWithGoogle}
+            className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-lg border-2 border-slate-300 bg-white p-2 font-bold text-slate-600 outline-none focus:ring-2 focus:ring-[#333] focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            <Image
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt="Google"
+              width={18}
+              height={18}
+            />
+            Google
+          </button>
+        </form>
       </div>
     </>
   );

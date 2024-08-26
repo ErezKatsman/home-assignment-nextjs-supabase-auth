@@ -1,4 +1,4 @@
-import FormCard from "@/app/components/FormCard";
+import FormCard from "../../components/FormCard";
 import { login } from "./actions";
 
 export default function Login() {
