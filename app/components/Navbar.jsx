@@ -75,7 +75,13 @@ export default function Navbar() {
         {/* Logo */}
         <div className="navbar-logo">
           <Link href="/">
-            <Image src={Logo} alt="Smart Storytime" width={230} quality={100} />
+            <Image
+              priority={1}
+              src={Logo}
+              alt="Smart Storytime"
+              width={230}
+              quality={100}
+            />
           </Link>
         </div>
 

@@ -29,6 +29,10 @@ export async function signInWithGoogle() {
     provider: "google",
     options: {
       redirectTo: "http://localhost:3000/auth/callback",
+      queryParams: {
+        access_type: "offline",
+        prompt: "consent",
+      },
     },
   });
 
@@ -43,7 +47,6 @@ export async function signout() {
   const supabase = createClient();
   const { error } = await supabase.auth.signOut();
   if (error) {
-    console.log(error);
     redirect("/error");
   }
 
@@ -61,9 +64,10 @@ export async function login(formData) {
   const { error } = await supabase.auth.signInWithPassword(data);
 
   if (error) {
+    console.log(error);
     redirect("/error");
   }
 
   revalidatePath("/", "layout");
-  redirect("/");
+  redirect("/create-book");
 }
